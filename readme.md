@@ -1,7 +1,9 @@
 # Fault attack on EdDSA and Ed25519
-We demonstrated how to recover enough part of the secret key of a device performing EdDSA signatures thanks to a single fault at the right time to be able to produce seemingly valid signature (even though the real signature by the actual secret key holder would not have the same value). This is an inherent weakness of the algorithms and cannot be avoided as long as the algorithms are generating their values through deterministic means. Our paper was presented during [FDTC 2017](http://conferenze.dei.polimi.it/FDTC17/program.html). We give here the code to perform fault signature simulations as well as key recovery from faulted signatures.
+We demonstrated how to recover enough part of the secret key of a device performing EdDSA signatures thanks to a single fault at the right time to be able to produce seemingly valid signature (even though the real signature by the actual secret key holder would not have the same value). This is an inherent weakness of the algorithms and cannot be avoided as long as the algorithms are generating their values through deterministic means. Our paper was presented during [FDTC 2017](www.fdtc-workshop.eu). We give here the code to perform fault signature simulations as well as key recovery from faulted signatures.
 
 In our example setup, we were able to attack and recover the secret key stored in an Arduino Nano running Ed25519 signature using the [ArduinoLibs](https://rweather.github.io/arduinolibs/crypto.html).
+
+Countermeasures against such fault attacks are detailled in our paper "Practical fault attack against the Ed25519 and EdDSA signature schemes".
 
 
 ## Requirements
@@ -65,5 +67,13 @@ Error
 Error: the glitch was not at offset 32
 ```
 
+## Publication  
+Article's DOI: [10.1109/FDTC.2017.12](https://doi.org/10.1109/FDTC.2017.12)  
+The accepted version is [freely available](https://romailler.ch/ddl/10.1109_FDTC.2017.12_eddsa.pdf).
+
 ## Copyrights
+Our original source code is copyright © 2017 Nagravision S.A., and was written by Sylvain Pelissier and Yolan Romailler.
+
+The Ed25519 python implementation is based on DJB's work, the Ed25519 software is in the public domain.
+
 The software published here is in the public domain. 
