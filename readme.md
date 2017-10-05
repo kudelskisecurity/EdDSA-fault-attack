@@ -76,4 +76,4 @@ Our original source code is copyright © 2017 Nagravision S.A., and was written 
 
 The Ed25519 python implementation is based on DJB's work, the Ed25519 software is in the public domain.
 
-The software published here is in the public domain. 
+The software published here is in under the Unlicense. 
